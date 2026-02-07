@@ -24,12 +24,26 @@ def create_spectrogram_2(file_path):
     # Don't overwrite 'x' so you don't lose the original length reference
     x_transformed = np.fft.rfft(x)
     mag = np.abs(x_transformed)
-    print(f"MAG: {mag}")
+    print(mag.max())
+    
+    
     # 4. Compute frequencies using the ORIGINAL length 'n'
     freqs = np.fft.rfftfreq(n, 1/fs)
-    print(f"FREQ: {freqs}")
+    #print(freqs.max())
+    
+    
+    
+    # freq.at(index) if > 3000 then yes
+    if mag.max() > 10000000 and freqs[mag.where(mag.max())] > 3000 :
+        print("There is a HONK!")
+    else:
+        print("No Honk")
 
-    # Now shapes will match: (n/2 + 1,) and (n/2 + 1,)
+    
+    # slope, intercept = np.polyfit(freqs, mag, 1)
+    # print(slope)
+
+    #Now shapes will match: (n/2 + 1,) and (n/2 + 1,)
     plt.figure(figsize=(10, 4))
     plt.plot(freqs, mag)
     plt.title(f'Spectrogram: {file_path}')
@@ -94,10 +108,10 @@ def create_spectrogram(file_path):
 #     }
 
 print('file1')
-spectrogram1 = create_spectrogram_2('src/loudHonk.wav')
+spectrogram1 = create_spectrogram_2('src/AvaTalking.wav')
 
 # print('file2')
-spectrogram2 = create_spectrogram_2('src/CarHonk1.wav')
+spectrogram2 = create_spectrogram_2('src/test2.wav')
 
 
 # corr = scipy.signal.correlate2d(spectrogram1, spectrogram2, mode="valid")
