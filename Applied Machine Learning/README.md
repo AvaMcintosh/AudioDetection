@@ -35,19 +35,23 @@ This project explores how customization, user choice, and future ear-scanning da
 - Themes
   - Marvel/Superhero
   - DC design etc.
+  
 ### Tech used
 - HTML
 - CSS
 - JavaScript
 - VS Code
+
 ## Future Work
 Ear Scanning and Comfort
 - real ear measurment exteaction
 - comfort spilling
 - Fit classification
+
 Audio Intelligence
 - Digital Audio Signal Processing (DSP)
 - Machine learning for sound personalization
+
 User Experience
 - Order preview
 - User design experience
