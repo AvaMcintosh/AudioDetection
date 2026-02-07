@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Earbud Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎧 Design Your Custom Runner Earbuds</h1>
+
+<div class="container">
+    <div class="earbud-preview">
+        <div id="earbud"></div>
+    </div>
+
+    <div class="controls">
+        <label>Choose Color</label>
+        <input type="color" id="colorPicker">
+
+        <label>Pattern</label>
+        <select id="pattern">
+            <option value="none">None</option>
+            <option value="dots">Dots</option>
+            <option value="lines">Lines</option>
+        </select>
+
+        <label>Comfort Fit (Size)</label>
+        <input type="range" id="sizeSlider" min="80" max="130" value="100">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

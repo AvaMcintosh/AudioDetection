@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.earbud-preview {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#earbud {
+    width: 100px;
+    height: 130px;
+    background: #444;
+    border-radius: 50% 50% 40% 40%;
+    transition: all 0.3s ease;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 200px;
+}
+
+label {
+    font-weight: bold;
+}
