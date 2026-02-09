@@ -5,4 +5,4 @@
 2. Hunter McIntosh
 3. Zain El-Sinawi
 4. Ari Kinney
-5. Arabella Partee
+5. Arabella Partee - Email: partee.7@wright.edu
